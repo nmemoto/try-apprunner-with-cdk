@@ -37,8 +37,7 @@ func getHello5(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// port := getEnv("PORT", "8080")
-	port := os.Getenv("PORT")
+	port := getEnv("PORT", "8080")
 	http.HandleFunc("/hello1", getHello1)
 	http.HandleFunc("/hello2", getHello2)
 	http.HandleFunc("/hello3", getHello3)
